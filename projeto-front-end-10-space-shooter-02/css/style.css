@@ -1,0 +1,184 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  body{
+    /* background: linear-gradient(0,  #081221, #030913);  */
+    background-color: #020710;
+    height: 100dvh;
+    overflow: hidden;
+    font-family: "Oxanium", serif;
+  }
+  .container{
+    display: flex;background: radial-gradient(#d6067f42, #051022eb);
+    /* background-color: darkmagenta; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    margin: auto;
+    height: 100%;
+    width: 600px;
+    overflow: hidden;
+  }
+  
+canvas{
+    margin: auto;
+    z-index: 1;
+    position: absolute;
+
+  }
+  .container .selecao-nave{
+    display: contents;
+  }
+   h2{
+    font-size: 15px;
+    color: #33fdfd;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    margin-bottom: 2rem;
+  }
+  .container .selecionar-Naves{
+    background-color: #03081076;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    border: 5px double #23105f;
+    width: 15rem;
+    height: 7rem;
+    margin-bottom: 40px;
+    z-index: 2;
+  }
+  .container .img-Naves{
+    height: 5rem;
+    width: 5rem;
+    border: 1px solid #23105f;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .container .selecionado{
+    border: 2px solid #33fdfd4e;
+    filter: drop-shadow(1px 1px 10px #23105f);
+  }
+  #botao-start{
+    height: 10rem;
+    text-align: center;
+    width: 100%;
+    font-size: 1.3rem;
+    text-transform: capitalize;
+    border: none;
+    cursor: pointer;
+    user-select: none;
+    color: #33fdfd;
+    margin-bottom: 2rem;
+    animation: jumping 2s linear infinite;
+    z-index: 2;
+  }
+  .estrelas{
+    width: 0.1rem;
+    height: 0.1rem;
+    position: relative;
+    border-radius: 50%;
+    box-shadow:
+      -200px 40vh white,
+      85px 35vh white,
+      -160px 25vh white,
+      235px 15vh white,
+      -280px 5vh white,
+      45px -15vh white,
+      240px -25vh white,
+      -200px -35vh white;
+    animation: anim-stars 4s linear infinite;
+  }
+  .estrelas::after{
+    content: " ";
+    width: 0.1rem;
+    height: 0.1rem;
+    position: absolute; 
+    bottom: 90vh;
+    border-radius: 50%;
+    box-shadow: 
+    -200px 40vh white,
+    85px 35vh white,
+    -160px 25vh white,
+    235px 15vh white,
+    -280px 5vh white,
+    45px -15vh white,
+    240px -25vh white,
+    -200px -35vh white;
+      overflow: hidden;
+  }
+  .estrelas2{
+    position: relative;
+    width: 0.01rem;
+    height: 0.01rem;
+    border-radius: 50%;
+    box-shadow: 
+    -200px 40vh white,
+    85px 35vh white,
+    -160px 25vh white,
+    235px 15vh white,
+    -280px 5vh white,
+    45px -15vh white,
+    240px -25vh white,
+    -200px -35vh white,
+    -200px 40vh white,
+    85px 35vh white,
+    -160px 25vh white,
+    235px 15vh white,
+    -280px 5vh white,
+    45px -15vh white,
+    240px -25vh white,
+    -200px -35vh white;
+    animation: anim-stars 40s linear infinite;
+  }
+  .estrelas2::after{
+    content: " ";
+    position: absolute;
+    bottom: 100vh;
+    width: 0.01rem;
+    height: 0.01rem;
+    border-radius: 50%;
+    box-shadow: 
+    -200px 40vh white,
+    85px 35vh white,
+    -160px 25vh white,
+    235px 15vh white,
+    -280px 5vh white,
+    45px -15vh white,
+    240px -25vh white,
+    -200px -35vh white,
+    -200px 40vh white,
+    85px 35vh white,
+    -160px 25vh white,
+    235px 15vh white,
+    -280px 5vh white,
+    45px -15vh white,
+    240px -25vh white,
+    -200px -35vh white;
+  }
+  @keyframes anim-stars {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(90dvh);
+    }
+}
+@keyframes  jumping{
+  0%{
+    transform: translateY(0px);
+  }
+  50%{
+    transform: translateY(20px);
+  }
+  100%{
+    transform: translateY(0px);
+  }
+}
+@media (max-width: 600px){
+  .container{
+    width: 100%;
+  };
+};
